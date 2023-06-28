@@ -1,0 +1,42 @@
+@use '../base' as *;
+
+/* --------------------------------
+
+File#: _1_socials
+Title: Socials
+Descr: Section with links to social media accounts
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.socials__btn {
+  a {
+    --size: 1.25em;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    transition: .3s;
+
+
+
+    .icon {
+      font-size: .7em; /* icon size */
+      color: var(--color-primary); /* icon color */
+      transition: color .3s, transform .3s var(--ease-out-back);
+    }
+
+    &:hover {
+      background-color: var(--color-accent);
+
+
+      .icon {
+        transform: scale(1);
+
+      }
+    }
+  }
+}
