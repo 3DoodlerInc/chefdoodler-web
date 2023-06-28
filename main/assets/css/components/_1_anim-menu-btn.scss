@@ -50,6 +50,8 @@ Usage: codyhouse.co/license
   }
 }
 
+.hide-nav--has-bg .anim-menu-btn__icon { color: var(--color-secondary); }
+
 // menu to 'X' close
 .anim-menu-btn__icon--close {
   background-size: 100% 100%;

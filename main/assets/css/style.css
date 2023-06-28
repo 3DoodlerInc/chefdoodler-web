@@ -12551,6 +12551,10 @@ Usage: codyhouse.co/license
   border-radius: inherit;
 }
 
+.hide-nav--has-bg .anim-menu-btn__icon {
+  color: var(--color-secondary);
+}
+
 .anim-menu-btn__icon--close {
   background-size: 100% 100%;
   will-change: transform, background-size;
