@@ -12150,6 +12150,10 @@ p, .font-basic {
   font-family: "Poppins", system;
 }
 
+p {
+  font-size: 0.9em;
+}
+
 mark {
   background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
   color: inherit;
@@ -12574,6 +12578,9 @@ mark {
   width: 30px;
   display: inline-block;
   color: var(--color-secondary);
+}
+.contents-section li {
+  font-size: 0.9em;
 }
 
 .section-cta h1, .section-cta p {

@@ -114,7 +114,6 @@
     </header>
 
 
-
     <!--
      HERO section
     <-->
@@ -124,7 +123,8 @@
         <div class="position-relative z-index-2 text-left">
 
           <div class="text-component width-50%@md padding-bottom-md">
-            <h1 class="color-white text-xxxxl">Sugar Creations in Seconds</h1>
+            <h1 class="color-white text-xxxxl">Meet the Pen that Draws in Sugar</h1>
+            <p class="color-white">This innovative culinary tool makes it fun and simple to turn sugar into beautiful, edible creations.</p>
           </div>
 
           <div class="flex flex-wrap flex-left gap-sm">
@@ -140,7 +140,6 @@
       </figure>
 
     </section>
-
 
 
     <!--
@@ -181,32 +180,42 @@
     </section>
 
 
-
     <!--
-     HERO 2 section
+     CTA section
     <-->
 
-    <section class="hero2-section has-section-divider-top" style="background-image: url('/assets/img/cd_bg2_green.jpg');">
+    <section class="section-cta padding-y-xxxl has-section-divider-top" style="background-image: url('/assets/img/cd_bg2.jpg');">
 
       <div class="section-divider">
         <svg viewBox="0 0 1920 60" aria-hidden="true">
-          <path fill="#F5F5F5" d="M-153.5,85.5a4002.033,4002.033,0,0,1,658-71c262.854-6.5,431.675,15.372,600,27,257.356,17.779,624.828,19.31,1089-58v102Z" />
+          <path fill="#f5f5f5" d="M-153.5,85.5a4002.033,4002.033,0,0,1,658-71c262.854-6.5,431.675,15.372,600,27,257.356,17.779,624.828,19.31,1089-58v102Z" />
         </svg>
       </div>
 
-      <div class="container max-width-adaptive-sm padding-y-xxl">
-        <div class="text-left">
-          <img class="logo-image" src="/assets/img/cd-logo-vert.png" />
-          <div class="text-component margin-bottom-md width-50%@md text-left">
-            <h1 class="color-white text-xxxl">Meet the Pen that Draws in Sugar</h1>
-            <p class="color-white">Meet ChefDoodler, the pen that lets you draw in sugar. This innovative culinary tool makes it fun and simple to turn sugar into beautiful, edible creations.</p>
-          </div>
+      <div class="container max-width-adaptive-md padding-top-xl padding-top-xxxl@sm">
 
-          <div class="flex flex-wrap flex-left gap-md">
-            <a href="#0" class="btn btn--white-green">Sign Up for More</a>
+        <div class="grid">
+          <div class="col-7@sm">
+            <div class="text-container">
+
+              <h1 class="text-xxxl">Join us to change</br> the way you decorate</h1>
+              <p class="padding-y-md">Stay up to date on launch timing, discover delicious recipes, and enjoy 10% off your first purchase.</p>
+
+              <form class="grid gap-xxxs text-sm@md">
+                <input class="form-control col@sm min-width-0 text-md" type="email" placeholder="Your email address" aria-label="Email address">
+                <button class="btn btn--yellow">Sign Me Up</button>
+              </form>
+
+
+            </div>
+
           </div>
         </div>
       </div>
+
+
+
+
     </section>
 
 
@@ -216,7 +225,7 @@
 
     <section class="features-section" style="background-image: url('/assets/img/swirly_bg.jpg');">
 
-      <div class="container max-width-adaptive-sm padding-y-xl">
+      <div class="container max-width-adaptive-md padding-y-xl">
 
         <div class="grid gap-lg@sm">
 
@@ -236,14 +245,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
 
 
     <!--
@@ -299,26 +300,25 @@
         </div>
       </div>
 
+      <script>
+        let parent = document.querySelectorAll(".animate-text");
+        for (let i = 0; i < parent.length; i++) {
+          parent[i].style.width = parent[i].children[0].clientWidth + "px";
+        }
+
+        var images = document.querySelectorAll('.image-container img');
+        var index = 0;
+
+        function rotateImages() {
+          images[index].classList.remove('active');
+          index = (index + 1) % images.length;
+          images[index].classList.add('active');
+        }
+
+        setInterval(rotateImages, 3000);
+      </script>
+
     </section>
-
-    <script>
-      let parent = document.querySelectorAll(".animate-text");
-      for (let i = 0; i < parent.length; i++) {
-        parent[i].style.width = parent[i].children[0].clientWidth + "px";
-      }
-
-      var images = document.querySelectorAll('.image-container img');
-      var index = 0;
-
-      function rotateImages() {
-        images[index].classList.remove('active');
-        index = (index + 1) % images.length;
-        images[index].classList.add('active');
-      }
-
-      setInterval(rotateImages, 3000);
-    </script>
-
 
 
     <!--
@@ -514,6 +514,9 @@
     </section>
 
 
+    <!--
+     CONTENTS section
+    <-->
 
     <section class="padding-y-xl contents-section">
 
@@ -551,7 +554,10 @@
     </section>
 
 
-    <section class="section-cta padding-y-xxxl has-section-divider-top" style="background-image: url('/assets/img/cd_bg2.jpg');">
+    <!--
+     HERO 2 section
+
+    <section class="hero2-section " style="background-image: url('/assets/img/cd_bg2.jpg');">
 
       <div class="section-divider">
         <svg viewBox="0 0 1920 60" aria-hidden="true">
@@ -559,32 +565,27 @@
         </svg>
       </div>
 
-      <div class="container max-width-adaptive-md padding-top-xl padding-top-xxxl@sm">
+      <div class="container max-width-adaptive-sm padding-y-xxl">
+        <div class="text-left">
+          <img class="logo-image" src="/assets/img/cd-logo-vert.png" />
+          <div class="text-component margin-bottom-md width-50%@md text-left">
+            <h1 class="color-white text-xxxl">Meet the Pen that Draws in Sugar</h1>
+            <p class="color-white">Meet ChefDoodler, the pen that lets you draw in sugar. This innovative culinary tool makes it fun and simple to turn sugar into beautiful, edible creations.</p>
+          </div>
 
-        <div class="grid">
-          <div class="col-7@sm">
-            <div class="text-container">
-
-              <h1 class="text-xxxl">Join us to change</br> the way you decorate</h1>
-              <p class="padding-y-md">Stay up to date, discover delicious recipes, and enjoy 10% off your first purchase.</p>
-
-              <form class="grid gap-xxxs text-sm@md">
-                <input class="form-control col@sm min-width-0 text-md" type="email" placeholder="Your email address" aria-label="Email address">
-                <button class="btn btn--yellow">Sign Me Up</button>
-              </form>
-
-
-            </div>
-
+          <div class="flex flex-wrap flex-left gap-md">
+            <a href="#0" class="btn btn--white-green">Sign Up for More</a>
           </div>
         </div>
       </div>
-
-
-
-
     </section>
 
+    <-->
+
+
+    <!--
+     FAQ section
+    <-->
 
     <section class="has-section-divider-bottom faq-section padding-y-xxl" style="background-image: url('/assets/img/swirly_yellow_bg2.jpg');">
 
@@ -597,7 +598,7 @@
 
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
-              <span class="text-md">How can I download the invoice for my purchase?</span>
+              <span class="text-md">I missed the Kickstarter, when can I get my hands on ChefDoodler?</span>
 
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -617,29 +618,7 @@
 
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
-              <span class="text-md">How many devices can I use?</span>
-
-              <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
-                <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="2" y1="10" x2="18" y2="10" />
-                  <line x1="10" y1="18" x2="10" y2="2" />
-                </g>
-              </svg>
-            </button>
-
-            <div class="accordion__panel padding-top-xxs padding-x-md padding-bottom-md js-accordion__panel">
-              <div class="text-component line-height-md text-space-y-md">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a ab quae quas optio ut officia quia? Modi at impedit dolorem est voluptatem facilis, beatae atque tenetur, soluta dolorum inventore sapiente laborum. Alias esse
-                  soluta porro distinctio aperiam, qui suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a ab quae quas optio ut officia quia? Modi at impedit dolorem est voluptatem facilis, beatae atque tenetur, soluta dolorum inventore sapiente laborum. Alias esse
-                  soluta porro distinctio aperiam, qui suscipit.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="accordion__item  js-accordion__item">
-            <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
-              <span class="text-md">What is the license of your resources?</span>
+              <span class="text-md">I'm one of your early adopter backers, how do I get updates regarding my ChefDoodler?</span>
 
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -659,7 +638,7 @@
 
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
-              <span class="text-md">Can I suggest new app features?</span>
+              <span class="text-md">What can this pen do?</span>
 
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 20 20" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -671,8 +650,6 @@
 
             <div class="accordion__panel padding-top-xxs padding-x-md padding-bottom-md js-accordion__panel">
               <div class="text-component line-height-md text-space-y-md">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a ab quae quas optio ut officia quia? Modi at impedit dolorem est voluptatem facilis, beatae atque tenetur, soluta dolorum inventore sapiente laborum. Alias esse
-                  soluta porro distinctio aperiam, qui suscipit.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a ab quae quas optio ut officia quia? Modi at impedit dolorem est voluptatem facilis, beatae atque tenetur, soluta dolorum inventore sapiente laborum. Alias esse
                   soluta porro distinctio aperiam, qui suscipit.</p>
               </div>
@@ -702,6 +679,10 @@
     </section>
 
 
+    <!--
+     FOOTER section
+    <-->
+
     <footer class="footer-v5 padding-y-lg">
 
       <div class="container max-width-lg">
@@ -719,7 +700,7 @@
                 </div>
 
                 <form class="grid gap-xxxs text-sm@md">
-                  <input class="form-control col min-width-0" type="email" placeholder="Your email address" aria-label="Email address">
+                  <input class="form-control col min-width-0 text-md" type="email" placeholder="Your email address" aria-label="Email address">
                   <button class="btn btn--yellow col-content">Subscribe</button>
                 </form>
 
@@ -727,7 +708,7 @@
             </div>
 
             <div class="col-2@xs text-right@sm margin-top-md margin-0@xs">
-              <h4 class="margin-bottom-xs text-base@md color-white">Product</h4>
+              <h4 class="margin-bottom-xs text-base@md color-white">More Info</h4>
               <ul class="grid gap-xs text-sm@md">
                 <li><a class="footer-v5__link" href="#0">About</a></li>
                 <li><a class="footer-v5__link" href="#0">Getting Started</a></li>
@@ -808,10 +789,10 @@
             </div>
 
             <div>
-              <p class="text-sm color-white flex flex-wrap gap-xs">
-                <a class="color-inherit text-underline" href="#0">Terms</a>
-                <a class="color-inherit text-underline" href="#0">Privacy</a>
-                <a class="color-inherit text-underline" href="#0">Cookies</a>
+              <p class="text-xs@md color-white flex flex-wrap gap-xs">
+                <a class="color-inherit" href="#0">Terms</a>
+                <a class="color-inherit" href="#0">Privacy</a>
+                <a class="color-inherit" href="#0">Cookies</a>
               </p>
             </div>
 
@@ -819,8 +800,6 @@
         </div>
       </div>
     </footer>
-
-
 
 
     <script src="assets/js/scripts.js"></script>

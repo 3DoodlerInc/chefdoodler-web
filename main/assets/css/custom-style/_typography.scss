@@ -61,6 +61,8 @@ p, .font-basic {
   font-family: "Poppins", system;
 }
 
+p { font-size: .9em; }
+
 mark {
   background-color: alpha(var(--color-accent), 0.2);
   color: inherit;
