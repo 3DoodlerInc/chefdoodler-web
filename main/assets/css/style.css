@@ -12146,6 +12146,10 @@ h1, h2, h3, h4 {
   --heading-font-weight: 700;
 }
 
+p, .font-basic {
+  font-family: "Poppins", system;
+}
+
 mark {
   background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
   color: inherit;
@@ -12180,7 +12184,7 @@ mark {
 
 :root {
   --btn-font-size: 1em;
-  --btn-padding-x: var(--space-sm);
+  --btn-padding-x: var(--space-md);
   --btn-padding-y: var(--space-xs);
   --btn-radius: var(--radius-xl);
 }
@@ -12195,6 +12199,10 @@ mark {
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.2s ease;
   will-change: transform;
+  border-width: 3px;
+  font-weight: bold;
+  border-style: solid;
+  font-size: 24px;
 }
 .btn:focus-visible {
   box-shadow: 0 0 0 2px var(--color-bg), 0px 0px 0px 4px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15);
@@ -12338,25 +12346,30 @@ mark {
   color: var(--color-secondary);
 }
 
+.btn--lightblue {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
 .btn--yellow-clear {
   border-color: var(--color-primary);
 }
 
 .btn--white {
-  border: solid 2px #fff;
+  border-color: #fff;
   color: #fff;
   background: transparent;
 }
 
 .btn--purple {
-  border: solid 2px #421660;
+  border-color: #421660;
   color: #421660;
   background: transparent;
 }
 
 .btn--white-green {
   background-color: #fff;
-  border: solid 2px var(--color-secondary);
+  border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
 
@@ -12389,12 +12402,16 @@ mark {
 }
 .hero2-section {
   background-size: cover;
-  background-position: -150px;
+  background-position: -260px;
 }
 @media (min-width: 32rem) {
   .hero2-section {
     background-position: 0;
   }
+}
+.hero2-section .logo-image {
+  max-width: 200px;
+  margin-bottom: 30px;
 }
 
 .scrolling-section {
@@ -12498,6 +12515,8 @@ mark {
 }
 .overscroll-section {
   background-color: #fcc14d;
+  background-attachment: fixed;
+  background-size: contain;
 }
 .overscroll-section h1 {
   color: var(--color-secondary);
@@ -12506,6 +12525,241 @@ mark {
   border-radius: 80px;
 }
 
+.faq-section {
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+.faq-section h1, .faq-section h3 {
+  color: var(--color-secondary);
+}
+.faq-section .accordion__item {
+  border-style: dotted;
+  border: none;
+}
+.faq-section .accordion__header {
+  background-color: var(--color-tertiary);
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.faq-section .accordion__item--is-open > .accordion__panel {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.social-drag-section {
+  background-position: top;
+}
+.social-drag-section h2 {
+  color: var(--color-secondary);
+}
+.social-drag-section .socials__btn a {
+  --size: 2.2em;
+}
+.social-drag-section .socials__btn a .icon {
+  font-size: 1.1em;
+}
+.social-drag-section .f-header__item {
+  border-bottom: none !important;
+  margin-right: var(--space-xs);
+}
+.social-drag-section .drag-gallery {
+  margin-bottom: 40px;
+}
+
+.contents-section h1 {
+  color: var(--color-secondary);
+}
+.contents-section li b {
+  font-weight: bold;
+  width: 30px;
+  display: inline-block;
+  color: var(--color-secondary);
+}
+
+.section-cta h1, .section-cta p {
+  color: var(--color-primary);
+}
+.section-cta .btn {
+  max-width: 200px;
+  margin-top: 15px;
+}
+@media (min-width: 48rem) {
+  .section-cta .btn {
+    margin-top: 0;
+  }
+}
+
+.footer-v5 {
+  background-color: var(--color-secondary);
+}
+.footer-v5 .footer-v5__link {
+  color: var(--color-accent);
+}
+.footer-v5 .form-control {
+  margin-right: 5px;
+  max-width: 350px;
+}
+.footer-v5 .border-bottom,
+.footer-v5 .border-top {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.footer-v5 .logo-image {
+  max-width: 140px;
+  margin-top: 20px;
+}
+@media (min-width: 32rem) {
+  .footer-v5 .logo-image {
+    max-width: 200px;
+    margin-top: 50px;
+  }
+}
+.footer-v5 .socials__btn a {
+  --size: 2.25em;
+  background-color: #fcc14d;
+  margin-right: 15px;
+  margin-left: 0;
+}
+@media (min-width: 32rem) {
+  .footer-v5 .socials__btn a {
+    margin-left: 15px;
+    margin-right: 0px;
+  }
+}
+.footer-v5 .socials__btn a .icon {
+  font-size: 1.3em;
+  color: var(--color-secondary);
+}
+
+/* --------------------------------
+
+File#: _1_accordion
+Title: Accordion
+Descr: Create stacked sections of content and allow the user to expand/collapse them
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  /* general */
+  --accordion-border-width: 1px;
+  /* icon */
+  --accordion-icon-size: 20px;
+  --accordion-icon-stroke-width: 2px;
+}
+
+.accordion__item {
+  border-style: solid;
+  border-color: var(--color-contrast-lower);
+  border-bottom-width: var(--accordion-border-width);
+}
+.accordion__item:first-child {
+  border-top-width: var(--accordion-border-width);
+}
+
+.accordion__header { /* button */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__header .icon {
+  --size: var(--accordion-icon-size);
+}
+.accordion__header .icon .icon__group {
+  stroke-width: var(--accordion-icon-stroke-width);
+}
+
+.accordion__icon-arrow .icon__group,
+.accordion__icon-arrow-v2 .icon__group,
+.accordion__icon-plus .icon__group {
+  will-change: transform;
+  transform-origin: 50% 50%;
+}
+
+.accordion__icon-arrow .icon__group > * {
+  transform-origin: 10px 14px;
+}
+
+.accordion__icon-arrow-v2 .icon__group > * {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 20;
+  transform: translateY(4px);
+}
+.accordion__icon-arrow-v2 .icon__group > *:first-child {
+  stroke-dashoffset: 10.15;
+}
+.accordion__icon-arrow-v2 .icon__group > *:last-child {
+  stroke-dashoffset: 10.15;
+}
+
+.accordion__icon-plus .icon__group {
+  transform: rotate(-90deg);
+}
+.accordion__icon-plus .icon__group > * {
+  transform-origin: 50% 50%;
+}
+.accordion__icon-plus .icon__group > *:first-child {
+  transform: rotate(-90deg);
+}
+
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow .icon__group { /* animated arrow icon */ }
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow .icon__group > *:first-child {
+  transform: translateY(-8px) rotate(-90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow .icon__group > *:last-child {
+  transform: translateY(-8px) rotate(90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group { /* animated arrow icon v2 */
+  transform: rotate(-90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group > *:first-child, .accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group *:last-child {
+  stroke-dashoffset: 0;
+  transform: translateY(0px);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-plus .icon__group { /* animated plus icon */
+  transform: rotate(0);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-plus .icon__group > *:first-child {
+  transform: rotate(0);
+}
+
+.accordion__panel {
+  display: none;
+  will-change: height;
+  transform: translateZ(0px);
+}
+
+.accordion__item--is-open > .accordion__panel {
+  display: block;
+}
+
+/* animations */
+.accordion[data-animation=on] .accordion__item--is-open .accordion__panel > * {
+  animation: accordion-entry-animation 0.4s var(--ease-out);
+}
+.accordion[data-animation=on] .accordion__icon-arrow .icon__group,
+.accordion[data-animation=on] .accordion__icon-arrow-v2 .icon__group,
+.accordion[data-animation=on] .accordion__icon-plus .icon__group {
+  transition: transform 0.3s var(--ease-out);
+}
+.accordion[data-animation=on] .accordion__icon-arrow .icon__group > *,
+.accordion[data-animation=on] .accordion__icon-arrow-v2 .icon__group > *,
+.accordion[data-animation=on] .accordion__icon-plus .icon__group > * {
+  transition: transform 0.3s, stroke-dashoffset 0.3s;
+  transition-timing-function: var(--ease-out);
+}
+
+@keyframes accordion-entry-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /* --------------------------------
 
 File#: _1_anim-menu-btn
@@ -12867,6 +13121,64 @@ Usage: codyhouse.co/license
 }
 
 /* #endregion */
+/* --------------------------------
+
+File#: _1_main-footer-v5
+Title: Main Footer v5
+Descr: Footer navigation template
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.footer-v5 {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-v5__popular-link {
+  display: inline-block;
+  padding: var(--space-xxs);
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-contrast-medium);
+  line-height: 1;
+  transition: 0.2s;
+}
+.footer-v5__popular-link:hover {
+  color: var(--color-contrast-high);
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+
+.footer-v5__back-to-top {
+  color: var(--color-contrast-medium);
+  transition: color 0.2s;
+}
+.footer-v5__back-to-top:hover {
+  color: var(--color-contrast-high);
+}
+
+.footer-v5__link {
+  color: var(--color-contrast-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-v5__link:hover {
+  color: var(--color-contrast-high);
+  text-decoration: underline;
+}
+
+.footer-v5__social-btn {
+  display: block;
+  text-decoration: none;
+  color: var(--color-contrast-medium);
+  transition: color 0.2s;
+}
+.footer-v5__social-btn .icon {
+  display: block;
+}
+.footer-v5__social-btn:hover {
+  color: var(--color-contrast-high);
+}
+
 /* --------------------------------
 
 File#: _1_masonry
@@ -13814,6 +14126,14 @@ Usage: codyhouse.co/license
     transform: translateX(-200%) scale(1);
   }
 }
+/* --------------------------------
+
+File#: _2_faq-v2
+Title: Frequent Questions v2
+Descr: Q&A template based on the accordion component
+Usage: codyhouse.co/license
+
+-------------------------------- */
 /* --------------------------------
 
 File#: _2_flexi-header

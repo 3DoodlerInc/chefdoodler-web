@@ -8,7 +8,7 @@
 
 :root {
   --btn-font-size: 1em;
-  --btn-padding-x: var(--space-sm);
+  --btn-padding-x: var(--space-md);
   --btn-padding-y: var(--space-xs);
   --btn-radius: var(--radius-xl);
 }
@@ -22,6 +22,10 @@
   @include fontSmooth;
   transition: all 0.2s ease;
   will-change: transform;
+  border-width: 3px;
+  font-weight: bold;
+  border-style: solid;
+  font-size: 24px;
 
   &:focus-visible {
     box-shadow: 0 0 0 2px var(--color-bg), 0px 0px 0px 4px alpha(var(--color-contrast-higher), 0.15);
