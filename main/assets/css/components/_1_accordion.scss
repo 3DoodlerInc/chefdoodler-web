@@ -130,6 +130,7 @@ Usage: codyhouse.co/license
   transform: translateZ(0px);
 }
 
+/* purgecss ignore */
 .accordion__item--is-open > .accordion__panel {
   display: block;
 }
