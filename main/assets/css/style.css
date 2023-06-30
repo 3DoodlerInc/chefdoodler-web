@@ -12337,6 +12337,13 @@ mark {
     margin-left: 10px;
   }
 }
+.hero-video-bg {
+  background-color: black;
+}
+.hero-video-bg .hero-video-bg__video {
+  opacity: 0.8;
+}
+
 .color-purple {
   color: #421660;
 }

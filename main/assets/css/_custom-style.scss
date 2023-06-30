@@ -50,6 +50,18 @@
 
 
 //
+// HERO Section
+//
+
+.hero-video-bg {
+  background-color: black;
+  .hero-video-bg__video { opacity: .8; }
+
+}
+
+
+
+//
 // BUTTONS
 //
 
@@ -301,7 +313,7 @@
     background-color: rgba(255,255,255,.6);
     display: block;
   }
-  
+
 }
 
 
