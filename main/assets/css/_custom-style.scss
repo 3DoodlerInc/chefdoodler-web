@@ -352,7 +352,7 @@
   }
 
   li {
-    font-size: .9em; 
+    font-size: .9em;
   }
 
 }
@@ -365,11 +365,14 @@
 
 .section-cta {
 
+  background-position: -670px -210px;
+
   h1, p { color: var(--color-primary); }
   .btn { max-width: 200px; margin-top: 15px; }
 
   @include breakpoint(sm) {
     .btn { margin-top: 0; }
+    background-position: 0 0; 
   }
 
 }

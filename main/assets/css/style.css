@@ -12583,6 +12583,9 @@ mark {
   font-size: 0.9em;
 }
 
+.section-cta {
+  background-position: -670px -210px;
+}
 .section-cta h1, .section-cta p {
   color: var(--color-primary);
 }
@@ -12591,6 +12594,9 @@ mark {
   margin-top: 15px;
 }
 @media (min-width: 48rem) {
+  .section-cta {
+    background-position: 0 0;
+  }
   .section-cta .btn {
     margin-top: 0;
   }
