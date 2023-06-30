@@ -12548,6 +12548,7 @@ mark {
 }
 .faq-section .accordion__item--is-open > .accordion__panel {
   background-color: rgba(255, 255, 255, 0.6);
+  display: block;
 }
 
 .social-drag-section {

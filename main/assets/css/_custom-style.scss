@@ -299,6 +299,7 @@
 
   .accordion__item--is-open > .accordion__panel {
     background-color: rgba(255,255,255,.6);
+    display: block;
   }
 }
 
@@ -372,7 +373,7 @@
 
   @include breakpoint(sm) {
     .btn { margin-top: 0; }
-    background-position: 0 0; 
+    background-position: 0 0;
   }
 
 }
