@@ -14,13 +14,14 @@
 }
 
 .form-control {
-  background: var(--color-bg-dark);
+  background: rgba(255,255,255,.2);
   line-height: 1.2;
-  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower);
+  box-shadow: inset 0px 0px 0px 2px var(--color-contrast-lower);
   transition: all 0.2s ease;
+  margin-right: 5px; 
 
   &::placeholder {
-    opacity: 1;  
+    opacity: 1;
     color: var(--color-contrast-low);
   }
 

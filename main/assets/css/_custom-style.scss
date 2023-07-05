@@ -294,6 +294,7 @@
 .faq-section {
     background-position: 50% 50%;
     background-attachment: fixed;
+    background-size: cover;
 
   h1, h3 { color: var(--color-secondary); }
 
@@ -313,6 +314,8 @@
     background-color: rgba(255,255,255,.6);
     display: block;
   }
+
+  .btn { border-color: var(--color-secondary); }
 
 }
 

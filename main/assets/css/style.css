@@ -12281,10 +12281,11 @@ mark {
 }
 
 .form-control {
-  background: var(--color-bg-dark);
+  background: rgba(255, 255, 255, 0.2);
   line-height: 1.2;
-  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower);
+  box-shadow: inset 0px 0px 0px 2px var(--color-contrast-lower);
   transition: all 0.2s ease;
+  margin-right: 5px;
 }
 .form-control::-moz-placeholder {
   opacity: 1;
@@ -12539,6 +12540,7 @@ mark {
 .faq-section {
   background-position: 50% 50%;
   background-attachment: fixed;
+  background-size: cover;
 }
 .faq-section h1, .faq-section h3 {
   color: var(--color-secondary);
@@ -12556,6 +12558,9 @@ mark {
 .faq-section .accordion__item--is-open > .accordion__panel {
   background-color: rgba(255, 255, 255, 0.6);
   display: block;
+}
+.faq-section .btn {
+  border-color: var(--color-secondary);
 }
 
 .social-drag-section {
@@ -12649,6 +12654,33 @@ mark {
 .footer-v5 .socials__btn a .icon {
   font-size: 1.3em;
   color: var(--color-secondary);
+}
+
+body.thanks {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  background-color: #017786;
+}
+@media screen and (min-width: 800px) {
+  body.thanks {
+    background-position: 0 -10vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body.thanks {
+    background-position: 0 -20vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body.thanks {
+    background-position: 0 -30vw;
+  }
+}
+@media screen and (min-width: 2200px) {
+  body.thanks {
+    background-position: 0 -40vw;
+  }
 }
 
 /* --------------------------------
