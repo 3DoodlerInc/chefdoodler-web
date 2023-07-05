@@ -12556,7 +12556,7 @@ mark {
   border-radius: 5px;
 }
 .faq-section .accordion__item--is-open > .accordion__panel {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(251, 164, 147, 0.2);
   display: block;
 }
 .faq-section .btn {
