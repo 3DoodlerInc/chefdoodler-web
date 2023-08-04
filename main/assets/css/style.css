@@ -12656,29 +12656,34 @@ mark {
   color: var(--color-secondary);
 }
 
-body.thanks {
+body.thanks,
+body.feedback {
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 100px;
   background-color: #017786;
 }
 @media screen and (min-width: 800px) {
-  body.thanks {
+  body.thanks,
+  body.feedback {
     background-position: 0 -10vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  body.thanks {
+  body.thanks,
+  body.feedback {
     background-position: 0 -20vw;
   }
 }
 @media screen and (min-width: 1500px) {
-  body.thanks {
+  body.thanks,
+  body.feedback {
     background-position: 0 -30vw;
   }
 }
 @media screen and (min-width: 2200px) {
-  body.thanks {
+  body.thanks,
+  body.feedback {
     background-position: 0 -40vw;
   }
 }
