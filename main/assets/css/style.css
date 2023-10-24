@@ -12422,7 +12422,7 @@ mark {
   }
 }
 .hero2-section .logo-image {
-  max-width: 200px;
+  max-width: 350px;
   margin-bottom: 30px;
 }
 
@@ -12630,12 +12630,12 @@ mark {
   border-color: rgba(255, 255, 255, 0.2);
 }
 .footer-v5 .logo-image {
-  max-width: 140px;
+  max-width: 100%;
   margin-top: 20px;
 }
 @media (min-width: 32rem) {
   .footer-v5 .logo-image {
-    max-width: 200px;
+    max-width: 100%;
     margin-top: 50px;
   }
 }
