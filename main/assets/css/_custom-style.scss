@@ -147,17 +147,20 @@
 
 .hero2-section {
   background-size: cover;
-  background-position: -260px;
-
-  @include breakpoint(xs) {
-    background-position: 0;
-  }
+  background-position: -450px;
 
   .logo-image {
-    max-width: 250px;
+    max-width: 150px;
     margin-bottom: 30px;
   }
 
+  @include breakpoint(xs) {
+
+    background-position: 0;
+
+    .logo-image { max-width: 250px; }
+
+  }
 
 }
 
@@ -390,6 +393,7 @@
   @include breakpoint(sm) {
     .btn { margin-top: 0; }
     background-position: 0 0;
+    background-size: cover;
   }
 
 }
@@ -410,7 +414,7 @@
   .border-top { border-color: rgba(255,255,255,.2) }
 
   .logo-image {
-    max-width: 200px;
+    max-width: 150px;
     margin-top: 20px;
 
     @include breakpoint(xs) {
@@ -464,4 +468,9 @@ body.feedback {
     background-position: 0 -40vw;
   }
 
+}
+
+
+.video-section {
+  h2 { color: #156B76; }
 }

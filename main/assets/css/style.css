@@ -12414,16 +12414,19 @@ mark {
 }
 .hero2-section {
   background-size: cover;
-  background-position: -260px;
+  background-position: -450px;
+}
+.hero2-section .logo-image {
+  max-width: 150px;
+  margin-bottom: 30px;
 }
 @media (min-width: 32rem) {
   .hero2-section {
     background-position: 0;
   }
-}
-.hero2-section .logo-image {
-  max-width: 250px;
-  margin-bottom: 30px;
+  .hero2-section .logo-image {
+    max-width: 250px;
+  }
 }
 
 .scrolling-section {
@@ -12609,6 +12612,7 @@ mark {
 @media (min-width: 48rem) {
   .section-cta {
     background-position: 0 0;
+    background-size: cover;
   }
   .section-cta .btn {
     margin-top: 0;
@@ -12630,7 +12634,7 @@ mark {
   border-color: rgba(255, 255, 255, 0.2);
 }
 .footer-v5 .logo-image {
-  max-width: 200px;
+  max-width: 150px;
   margin-top: 20px;
 }
 @media (min-width: 32rem) {
@@ -12686,6 +12690,10 @@ body.feedback {
   body.feedback {
     background-position: 0 -40vw;
   }
+}
+
+.video-section h2 {
+  color: #156B76;
 }
 
 /* --------------------------------
@@ -13539,6 +13547,50 @@ Usage: codyhouse.co/license
 }
 .modal-img-btn__icon-wrapper .icon {
   color: var(--color-white);
+}
+
+/* --------------------------------
+
+File#: _1_responsive-iframe
+Title: Resposive Iframe
+Descr: Responsive wrapper for iframe elements (e.g., YouTube and Vimeo videos)
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* variables */
+:root {
+  /* colors */
+  --rh5-color-primary-hsl: 250, 84%, 54%;
+  --rh5-color-bg-hsl: 0, 0%, 100%;
+  --rh5-color-contrast-high-hsl: 230, 7%, 23%;
+  --rh5-color-contrast-higher-hsl: 230, 13%, 9%;
+}
+
+/* component */
+/* utility classes */
+:where(.rh5-media-wrapper-16\:9) {
+  position: relative;
+  height: 0;
+}
+
+.rh5-media-wrapper-16\:9 {
+  padding-bottom: 56.25%;
+  border: solid 10px #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rh5-media-wrapper-16\:9 > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rh5-media-wrapper-16\:9 > *:not(iframe) {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* --------------------------------
