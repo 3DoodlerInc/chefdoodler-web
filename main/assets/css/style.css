@@ -12604,6 +12604,7 @@ mark {
 }
 .section-cta h1, .section-cta p {
   color: var(--color-primary);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .section-cta .btn {
   max-width: 200px;

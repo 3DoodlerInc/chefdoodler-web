@@ -387,7 +387,11 @@
 
   background-position: -310px 0px;
 
-  h1, p { color: var(--color-primary); }
+  h1, p {
+    color: var(--color-primary);
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+  }
+  
   .btn { max-width: 200px; margin-top: 15px; }
 
   @include breakpoint(xs) {
