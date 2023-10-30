@@ -385,15 +385,23 @@
 
 .section-cta {
 
-  background-position: -670px -210px;
+  background-position: -310px 0px;
 
   h1, p { color: var(--color-primary); }
   .btn { max-width: 200px; margin-top: 15px; }
 
+  @include breakpoint(xs) {
+    background-position: -290 0;
+  }
+
   @include breakpoint(sm) {
     .btn { margin-top: 0; }
-    background-position: 0 0;
+    background-position: -300 0;
     background-size: cover;
+  }
+
+  @include breakpoint(xl) {
+    background-position: 0 0;
   }
 
 }
@@ -476,5 +484,5 @@ body.feedback {
 }
 
 .rh5-media-wrapper-16\:9 {
-  position: relative; 
+  position: relative;
 }

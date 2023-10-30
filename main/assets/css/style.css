@@ -12600,7 +12600,7 @@ mark {
 }
 
 .section-cta {
-  background-position: -670px -210px;
+  background-position: -310px 0px;
 }
 .section-cta h1, .section-cta p {
   color: var(--color-primary);
@@ -12609,13 +12609,23 @@ mark {
   max-width: 200px;
   margin-top: 15px;
 }
+@media (min-width: 32rem) {
+  .section-cta {
+    background-position: -290 0;
+  }
+}
 @media (min-width: 48rem) {
   .section-cta {
-    background-position: 0 0;
+    background-position: -300 0;
     background-size: cover;
   }
   .section-cta .btn {
     margin-top: 0;
+  }
+}
+@media (min-width: 90rem) {
+  .section-cta {
+    background-position: 0 0;
   }
 }
 
